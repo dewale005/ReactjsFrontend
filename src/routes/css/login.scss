@@ -1,0 +1,67 @@
+body {
+    background: #6f36ff;
+}
+
+.form {
+    padding: 3%;
+}
+
+.formfield {
+    background: #fff;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-radius: 6px;
+    h1 {
+        font-size: 24px;
+        font-weight: 400;
+        font-family: inherit;
+        color: #6f36ff;
+        };
+}
+.logo {
+    margin-left: auto;
+    margin-right: auto;
+    width: 12%;
+    margin-top: 52px;
+    margin-bottom: 22px;
+    img {
+        width: 100%
+    }
+}
+
+.MuiFormControl-root-1 {
+    color: #6f36ff !important;
+    margin: 0 !important;
+    width: 90% !important;
+    border: 0 !important;
+    margin-top: 11px !important;
+    display: inline-flex !important;
+    padding: 0 !important;
+    position: relative !important;
+    min-width: 0 !important;
+    flex-direction: column !important;
+    vertical-align: top !important;
+} 
+
+.MuiButton-containedSecondary-90 {
+    color: #fff;
+    background-color: #6f36ff !important;
+    width: 90% !important;
+    padding: 14px !important;
+    margin-top: 12px !important;
+}
+
+.MuiDivider-root-103 {
+    height: 1px !important;
+    margin: 0;
+    margin-top: 26px !important;
+    margin-bottom: 12px !important;
+    border: none;
+    width: 90% !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    flex-shrink: 0 !important;
+    background-color: rgba(0, 0, 0, 0.21) !important;
+}
