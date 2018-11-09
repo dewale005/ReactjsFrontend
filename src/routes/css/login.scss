@@ -1,9 +1,20 @@
-body {
-    background: #6f36ff;
+.body {
+    background: #361a7c;
+    padding-top: 1%;
+    padding-bottom: 2.4%;
 }
 
 .form {
-    padding: 3%;
+    padding: 3% 6%;
+}
+
+.content {
+    width: 70%;
+    line-height: 33px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #000;
+    margin-top: 0px;
 }
 
 .formfield {
@@ -17,7 +28,7 @@ body {
         font-size: 24px;
         font-weight: 400;
         font-family: inherit;
-        color: #6f36ff;
+        color: #361a7c;
         };
 }
 .logo {
@@ -31,8 +42,10 @@ body {
     }
 }
 
-.MuiFormControl-root-1 {
-    color: #6f36ff !important;
+.form {
+.MuiButton-containedSecondary-66 {
+    color: #fff;
+    background-color: #361a7c !important;
     margin: 0 !important;
     width: 90% !important;
     border: 0 !important;
@@ -44,24 +57,31 @@ body {
     flex-direction: column !important;
     vertical-align: top !important;
 } 
+}
 
-.MuiButton-containedSecondary-90 {
-    color: #fff;
-    background-color: #6f36ff !important;
-    width: 90% !important;
+   .MuiButton-contained-88, .MuiButton-contained-88:hover, .MuiButton-containedPrimary-65,
+   .MuiButton-contained-64:hover, .MuiButton-contained-64 {
+    color: #fff !important;
+    background-color: #361a7c !important;
     padding: 14px !important;
     margin-top: 12px !important;
 }
 
-.MuiDivider-root-103 {
-    height: 1px !important;
-    margin: 0;
-    margin-top: 26px !important;
-    margin-bottom: 12px !important;
-    border: none;
-    width: 90% !important;
-    margin-right: auto !important;
-    margin-left: auto !important;
-    flex-shrink: 0 !important;
-    background-color: rgba(0, 0, 0, 0.21) !important;
+.MuiOutlinedInput-adornedEnd-190, .MuiOutlinedInput-adornedEnd-318, .MuiOutlinedInput-adornedEnd-27, .MuiOutlinedInput-adornedEnd-446,
+.MuiOutlinedInput-adornedEnd-574, .MuiInputBase-root-711.MuiOutlinedInput-root-698.MuiInputBase-fullWidth-720.MuiInputBase-formControl-712.MuiInputBase-adornedEnd-716.MuiOutlinedInput-adornedEnd-702,
+.MuiOutlinedInput-adornedEnd-830,.MuiOutlinedInput-adornedEnd-958,.MuiOutlinedInput-adornedEnd-1086, .MuiOutlinedInput-inputAdornedEnd-1222
+ {
+    padding-right: 0 !important;
+}
+
+.MuiIconButton-root-44 {
+    flex: 0 0 auto;
+    color: #361a7c !important;
+    margin-left: 14px !important;
+    padding: 12px;
+    overflow: visible;
+    font-size: 18px !important;
+    text-align: center;
+    transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    border-radius: 50%;
 }

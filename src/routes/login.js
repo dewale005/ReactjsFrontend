@@ -9,6 +9,8 @@ import Divider from '@material-ui/core/Divider';
 import logo from '../img/wale.png'
 import './css/login.scss';
 
+
+
 class Login extends Component {
     state = {
         password: '',
@@ -25,7 +27,7 @@ class Login extends Component {
 
     render() {
         return (
-            <div className="">
+            <div className="body">
                 <div className="logo">
                     <img src={logo} alt={"logo"} />
                 </div>
@@ -33,9 +35,13 @@ class Login extends Component {
                     <div className="form">
                         <h1>Log in to your account</h1>
                         <TextField
-                            id="outlined-with-placeholder"
+                            id="outlined-email-input"
                             label="Email"
-                            placeholder="Email"
+                            className="width"
+                            type="email"
+                            name="email"
+                            fullWidth
+                            autoComplete="email"
                             margin="normal"
                             variant="outlined"
                         />
@@ -44,6 +50,10 @@ class Login extends Component {
                             variant="outlined"
                             type={this.state.showPassword ? 'text' : 'password'}
                             label="Password"
+                            fullWidth
+                            autoComplete="current-password"
+                            margin="normal"
+                            className="width"
                             value={this.state.password}
                             onChange={this.handleChange('password')}
                             InputProps={{
@@ -59,7 +69,7 @@ class Login extends Component {
                                 ),
                             }}
                         />
-                        <Button variant="contained" color="secondary">
+                        <Button variant="contained" fullWidth>
                             Log in
                     </Button>
                     <Divider light />
@@ -70,5 +80,7 @@ class Login extends Component {
         );
     }
 }
+
+
 
 export default Login;
