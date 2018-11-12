@@ -1,6 +1,4 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
+import React, { Component } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
@@ -9,37 +7,32 @@ import { NavLink } from 'react-router-dom';
 import logo from '../img/wale2.png';
 import '../App.css';
 
-const styles = {
-    root: {
-        flexGrow: 1,
-    },
-    grow: {
-        flexGrow: 1,
-    },
-    menuButton: {
-        marginLeft: -12,
-        marginRight: 20,
-    },
-};
 
-function ButtonAppBar(props) {
-    const { classes } = props;
+class Navbar extends Component { 
+    
+    onLogin() {
+        this.props.onLogin();
+    }
+    onLogOut() {
+        this.props.onLogOut();
+    }
+    render() {
+        let nav;
+        if (this.props.accessToken) {
+            nav = <Button color="inherit" if onClick={this.onLogOut.bind(this)}>logOut</Button>
+        } else {
+            nav = <Button color="inherit" if onClick={this.onLogin.bind(this)}>Login</Button>
+        }
     return (
-        <div className={classes.root}>
+        <div>
             <AppBar position="static">
                 <Toolbar>
-                    <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
+                    <IconButton color="inherit" aria-label="Menu">
                         <img src={logo} alt={"brand"} />
                     </IconButton>
                     <div className="nav-right">
-                    <NavLink to="/" exact>
-                        <Button color="inherit">home</Button>
-                    </NavLink>
-                    <NavLink to="/login">
-                        <Button color="inherit">Login</Button>
-                    </NavLink>
-                    <NavLink to="/dashboard">
-                        <Button color="inherit" >Dashboard</Button>
+                    <NavLink to=".">
+                        {nav}
                     </NavLink>
                     </div>
                 </Toolbar>
@@ -47,9 +40,6 @@ function ButtonAppBar(props) {
         </div>
     );
 }
-
-ButtonAppBar.propTypes = {
-    classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(ButtonAppBar);
+export default Navbar;
